@@ -11,3 +11,4 @@ ENV/
 test.py
 logs/
 *.log
+Artifacts/
