@@ -3,5 +3,6 @@ numpy
 pymongo
 scikit-learn
 dotenv
+pyyaml
 
 #-e.
