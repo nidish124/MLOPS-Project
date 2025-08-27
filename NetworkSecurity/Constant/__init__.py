@@ -32,3 +32,22 @@ DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str = "report.yaml"
 PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 
+""" Data Transformation related constant start with Data_transformation var name"""
+
+DATA_TRANSFORMATION_DIR = 'data_transformation'
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR = 'transformed'
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR = 'transformed_obj'
+DATA_TRANSFORMATION_TRAIN_FILE = 'train.npy'
+DATA_TRANSFORMATION_TEST_FILE = 'test.npy'
+DATA_TRANSFORMATION_INPUT_PARMS = {
+    "missing_values": np.nan,
+    "n_neighbors": 3,
+    "weights": "uniform",
+}
+
+""" Model trainer constant variables"""
+MODEL_TRAINER_TRAINED_MODEL = 'trained_model.pkl'
+MODEL_TRAINER_DIR = 'model_trainer'
+MODEL_TRAINER_TRAINED_MODEL_DIR = 'trained_model'
+MODEL_TRAINER_EXPECTED_SCORE = 0.6
+MODEL_TRAINER_THRESHOLD = 0.05

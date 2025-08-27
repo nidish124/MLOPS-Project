@@ -62,8 +62,32 @@ class DataValidationConfig():
             Constant.DATA_VALIDATION_DRIFT_REPORT_DIR,Constant.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME
         )
 
-
-
+class DataTransformationConfig():
+    def __init__(self, training_pipline_config: Training_Pipline_Config):
+        self.data_transformation_dir:str = os.path.join(
+            training_pipline_config.artifact_dir, Constant.DATA_TRANSFORMATION_DIR)
+        self.data_transformation_train_file_path:str = os.path.join(
+            self.data_transformation_dir,Constant.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR, 
+            Constant.DATA_TRANSFORMATION_TRAIN_FILE
+        )
+        self.data_transformation_test_file_path:str = os.path.join(
+            self.data_transformation_dir,Constant.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR, 
+            Constant.DATA_TRANSFORMATION_TEST_FILE
+        )
+        self.data_transformation_obj_file_path:str = os.path.join(
+            self.data_transformation_dir,Constant.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
+            Constant.PREPROCESSING_OBJECT_FILE_NAME
+        )
 
         
-
+class ModelTrainerConfig():
+    def __init__(self, training_pipline_config: Training_Pipline_Config):
+        self.model_trainer_dir:str = os.path.join(
+            training_pipline_config.artifact_dir, Constant.MODEL_TRAINER_DIR)
+        
+        self.trained_model_file_path:str = os.path.join(
+            self.model_trainer_dir,Constant.MODEL_TRAINER_TRAINED_MODEL_DIR, 
+            Constant.MODEL_TRAINER_TRAINED_MODEL
+        )
+        self.expected_accuracy :float = Constant.MODEL_TRAINER_EXPECTED_SCORE
+        self.Threshold = Constant.MODEL_TRAINER_THRESHOLD
